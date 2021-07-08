@@ -59,7 +59,7 @@ app.component('product-display', {
 
     methods: {
         addToCart() {
-            this.$emit('add-to-cart')
+            this.cart += 1
         },
 
         updateImage(variantImage) {
