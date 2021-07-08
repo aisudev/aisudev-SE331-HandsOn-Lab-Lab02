@@ -110,6 +110,11 @@ p {
     width: 50%;
 }
 
+.product-detail{
+    margin: auto;
+    padding: 20px 10px;
+}
+
 .review-form {
     display: flex;
     flex-direction: column;
