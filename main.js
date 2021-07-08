@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            cart: 0,
+            cart: [],
             onSale: true,
             premium: true,
             detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate facere, aliquid omnis ab accusamus molestias id voluptatum consequatur ipsa hic iste nisi quaerat iusto veniam sequi perspiciatis qui quo dolorem?"
@@ -9,18 +9,19 @@ const app = Vue.createApp({
     },
 
     methods: {
-        addToCart() {
-            this.cart += 1
+        updateCart(id) {
+            this.cart.push(id)
         },
-        updateImage(variantImage) {
-            this.image = variantImage
-        },
-        updateVariant(index) {
-            this.selectVariant = index
+
+        removeCart(id) {
+            var index = this.cart.indexOf(id);
+            if (index !== -1) {
+                this.cart.splice(index, 1);
+            }
         }
     },
 
     computed: {
-        
+
     }
 })
